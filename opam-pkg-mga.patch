@@ -1,0 +1,31 @@
+Index: SPECS/opam.spec
+===================================================================
+--- SPECS/opam.spec	(revision 568600)
++++ SPECS/opam.spec	(working copy)
+@@ -1,11 +1,11 @@
+ Name:       opam
+-Version:    1.1.0
+-Release:    %mkrel 4
++Version:    1.1.1
++Release:    %mkrel 1
+ Summary:    A source-based package manager for OCaml
+ License:    GPL
+ Group:      Development/OCaml
+ URL:        http://opam.ocamlpro.com/
+-Source0:    http://www.ocamlpro.com/pub/opam-full-%{version}.tar.gz
++Source0:    https://github.com/ocaml/opam/releases/download/%{version}/opam-full-%{version}.tar.gz
+ BuildRequires:  ocaml-compiler
+ BuildRequires:  camlp4-devel
+ BuildRequires:  hevea
+@@ -79,9 +79,10 @@
+ 
+ %files
+ %doc README.md LICENSE CHANGES
+-%doc AUTHORS CONTRIBUTING
++%doc AUTHORS CONTRIBUTING.md
+ %{_bindir}/opam
+ %{_bindir}/opam-admin
++%{_bindir}/opam-installer
+ %{_mandir}/man1/opam.1*
+ %{_mandir}/man1/opam-*.1*
+ 
